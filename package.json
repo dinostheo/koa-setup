@@ -1,0 +1,39 @@
+{
+  "name": "koa-setup",
+  "version": "1.0.0",
+  "description": "Basic koa mongoose testable setup with example endpoint",
+  "main": "index.js",
+  "scripts": {
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec",
+    "start": "ENV_VAR=dev node_modules/.bin/nodemon index",
+    "test": "ENV_VAR=test node_modules/.bin/mocha test/*.js -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinostheo/koa-setup.git"
+  },
+  "keywords": [
+    "koa",
+    "mongoose",
+    "api"
+  ],
+  "author": "Dinos Theodorou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dinostheo/koa-setup/issues"
+  },
+  "homepage": "https://github.com/dinostheo/koa-setup#readme",
+  "dependencies": {
+    "koa": "^1.1.2",
+    "koa-mount": "^1.3.0",
+    "koa-router": "^5.3.0",
+    "mongoose": "^4.3.4"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "nodemon": "^1.8.1",
+    "supertest": "^1.1.0"
+  }
+}
