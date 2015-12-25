@@ -4,7 +4,7 @@
   "description": "Basic koa mongoose testable setup with example endpoint",
   "main": "index.js",
   "scripts": {
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec",
+    "cover": "ENV_VAR=test node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec",
     "start": "ENV_VAR=dev node_modules/.bin/nodemon index",
     "test": "ENV_VAR=test node_modules/.bin/mocha test/*.js -R spec"
   },
