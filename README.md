@@ -2,7 +2,7 @@
 Basic koa mongoose testable setup with example endpoint.
 
 ## Intro
-This is a koa mongoose setup that I came up while learning koa. Feel free to use it you like it, or if you think that some things could be or should be better, write an issue or send a pull request.
+This is a koa mongoose setup that I came up while learning koa. Feel free to use it if you like it, or if you think that some things could be or should be better, write an issue or send a pull request.
 
 ## Configuration
 This setup expects configuration `config/config.js` for the port and the database uri. The following example configuration is for development and test environment, but it could be expanded for a production environment in a similar fashion.
