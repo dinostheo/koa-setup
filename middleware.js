@@ -23,5 +23,30 @@ module.exports.init = function (app) {
 
     routes.init(router);
 
+    // Error handling
+    app.use(function *(next) {
+        try {
+            yield next;
+
+            if (this.status >= 400) {
+                this.throw(this.status);
+            }
+        } catch (err) {
+            this.status = err.status || 500;
+            this.type = 'json';
+            this.body = {
+                code: err.status || 500,
+                message: err.message || 'There was an error'
+            };
+
+            this.app.emit('error', err, this);
+        }
+    });
+
+    // Generic error listener
+    app.on('error', function (err) {
+        console.log('>>> ERROR: ', err);
+    });
+
     app.use(mount('/v1', router.middleware()));
 };

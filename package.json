@@ -1,6 +1,6 @@
 {
   "name": "koa-setup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic koa mongoose testable setup with example endpoint",
   "main": "index.js",
   "scripts": {

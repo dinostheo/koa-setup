@@ -3,3 +3,4 @@
  */
 
 require('./routes/status');
+require('./errors/404');
